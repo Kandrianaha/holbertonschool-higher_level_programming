@@ -1,4 +1,2 @@
 #!/usr/bin/python3
-for letter_code in range(97, 123):
-    print("{}".format(chr(letter_code)), end="")
-print()
+print("{}".format("".join(chr(i) for i in range(97, 123))), end="")
