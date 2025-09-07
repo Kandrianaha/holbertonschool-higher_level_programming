@@ -2,6 +2,10 @@
 def uppercase(str):
     new = ''
     for i in str:
-        if (ord(i) >= 96 and ord(i) <= 123):
-            new = new + chr(ord(i) - 32)
-        return new
+        if ord(i) >= 97 and ord(i) <= 122:
+            new += chr(ord(i) - 32)
+        else:
+            new += i
+    print("{}".format(new))
+uppercase("best")
+uppercase("Best School 98 Battery street")
