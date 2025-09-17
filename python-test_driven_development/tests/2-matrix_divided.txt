@@ -46,5 +46,5 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
->>> [[3, 9], [12, 15, 3]] / 3 
+>>> matrix_divided[[3, 9], [12, 15, 3]] / 3 
 TypeError: matrix must have each row with the same size
