@@ -30,7 +30,7 @@ def matrix_divided(matrix, div):
 
     row_length = len(matrix[0])
     if not all(len(row) == row_length for row in matrix):
-        raise TypeError("matrix must have each row with the same size")
+        raise TypeError("Each row of the matrix must have the same size")
     
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
