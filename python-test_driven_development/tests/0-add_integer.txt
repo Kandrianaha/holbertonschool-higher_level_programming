@@ -1,24 +1,52 @@
-$ cat 0-main.py
-#!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+The ``add_integer`` module
+======================
 
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, "School"))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+Using ``add_integer``
+-------------------
 
-$ ./0-main.py
-3
-98
-100
-98
-b must be an integer
-a must be an integer
+
+First import ``add_integer`` from the ``0-add_integer`` file:
+
+    >>> add = __import__('0-add_integer').add_integer
+
+Tests:
+
+    >>> add(1, 2)
+    3
+
+    >>> add(3.4, 1.2)
+    4
+
+    Test - a is not int
+    >>> add("haha", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    Test - b is not int
+    >>> add(1, "haha")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Test - result is infinity and there is float overflow
+    >>> add(1, float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test - cannot convert NaN to int
+    >>> add(1, float("nan"))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+    Test - missing one argument
+    >>> add(1)
+    99
+
+    Test - missing both arguments
+    >>> add()    
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
