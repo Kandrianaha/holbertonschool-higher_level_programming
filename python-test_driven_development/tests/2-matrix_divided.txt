@@ -45,3 +45,13 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+#Test unequal row sizes
+>>> matrix_divided([[3, 9], [12, 15, 3]], 3)
+Traceback (most recent call last):
+... 
+TypeError: matrix must have each row with the same size
+
+#Test division by infinity
+>>> matrix_divided([[1, 2], [3, 4]], float("inf"))
+[[0.0, 0.0], [0.0, 0.0]]
