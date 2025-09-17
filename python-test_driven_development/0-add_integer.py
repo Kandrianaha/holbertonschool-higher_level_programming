@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """
-This module docstring provides a function to add two integers after validating their types.
+This module docstring provides a function
+    to add two integers after validating their types.
 If the inputs are integers or floats, then cast floats to integers,
 and raise appropriate errors if the inputs are invalid.
 """
+
+
 def add_integer(a, b=98):
     """
     Adds two integers or floats after converting them to integers.
@@ -18,5 +21,5 @@ def add_integer(a, b=98):
 
     a = int(a)
     b = int(b)
-    
+
     return a + b
