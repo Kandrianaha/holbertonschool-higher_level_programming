@@ -3,9 +3,10 @@
 This module provides a class that defines a square by its size.
 """
 
+
 class Square:
     """
-    A class to represent a square.
+    This class defines a square by its size.
 
     Attributes:
         None
