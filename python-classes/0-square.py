@@ -6,9 +6,6 @@ This module defines an empty class Square.
 
 class Square:
     """
-    Adding an empty class
+    This is an empty class that defines a square.
     """
     pass
-
-s = Square()
-print(s)
