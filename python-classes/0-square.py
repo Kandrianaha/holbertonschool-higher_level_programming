@@ -5,8 +5,10 @@ This module defines an empty class Square.
 
 
 class Square:
-"""
-Adding an empty class
-"""
-
+    """
+    Adding an empty class
+    """
     pass
+
+s = Square()
+print(s)
