@@ -12,5 +12,8 @@ class Square:
         None
     """
 
-size = 0
-    pass
+def __init__(self, size):
+    """
+    Initializes a Square instance with a given size.
+    """
+    self.__size = size
