@@ -3,6 +3,7 @@
 This module defines a Square by private instance attribute size.
 """
 
+
 class Square:
     """
     A class that defines a square by its size.
