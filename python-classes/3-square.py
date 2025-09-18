@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-This module provides a function that defines a Square by private instance
-attribute size.
+This module defines a Square by private instance attribute size.
 """
+
 
 class Square:
     """
@@ -31,3 +31,12 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
+    def area(self):
+        """
+        Calculates and returns the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
+        return self.__size * self.__size
