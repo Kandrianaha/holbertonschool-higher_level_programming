@@ -3,6 +3,7 @@
 This module defines a Square by its size.
 """
 
+
 class Square:
     """
     Defining Square class with a private instance attribute size.
@@ -26,7 +27,7 @@ class Square:
             int: The size of the square.
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """
