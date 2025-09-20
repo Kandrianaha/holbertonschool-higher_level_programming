@@ -3,6 +3,7 @@
 This module defines a Rectangle class by its width and height.
 """
 
+
 class Rectangle:
     """
     A class that defines a rectangle by its width and height.
@@ -27,7 +28,7 @@ class Rectangle:
             int: The width of the rectangle.
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
