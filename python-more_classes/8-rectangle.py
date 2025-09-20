@@ -56,12 +56,13 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle using '#' characters."""
+        """Returns a string representation of the rectangle
+        using '#' characters."""
         if self.width == 0 or self.height == 0:
             return ""
         symbol = str(self.print_symbol)
         return '\n'.join([symbol * self.width for _ in range(self.height)])
-    
+
     def __repr__(self):
         """Returns a string that can recreate the rectangle using eval()."""
         return f"Rectangle({self.width}, {self.height})"
@@ -70,7 +71,7 @@ class Rectangle:
         """Prints a message when the rectangle is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Returns the rectangle with the greater area or rect_1 if equal."""
