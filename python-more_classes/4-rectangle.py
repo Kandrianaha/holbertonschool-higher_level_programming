@@ -95,5 +95,23 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle using '#' characters.
+
+        Returns:
+            str: The string representation of the rectangle,
+            or an empty string if width or height is 0.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return '\n'.join("#" * self.__width for _ in range(self.__height))
+
     def __repr__(self):
-        return f"Rectangle(width={self.__width}, height={self.__height})"
+        """
+        Returns a string representation of the rectangle that can be used to recreate it.
+
+        Returns:
+            str: The string representation of the rectangle in the format "Rectangle(width, height)".
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
