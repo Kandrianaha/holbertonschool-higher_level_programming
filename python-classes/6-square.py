@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Defines a Square class.
+This module defines a Square class with size and position attributes.
 """
 
 
 class Square:
     """
-    Defining Square class with a private instance attribute size.
+    Representing a square with size and position.
     """
     def __init__(self, size=0, position=(0, 0)):
         """
@@ -94,7 +94,7 @@ class Square:
         if self.__size == 0:
             print()
             return
-        for _ in range(self.__size):
-            print('#' * self.__size)
         for position in range(self.__position[1]):
             print()
+        for _ in range(self.__size):
+            print(' ' * self.__position[0] + '#' * self.__size)
