@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines a Rectangle class that should return the string representation
-of the rectangle using the '#' character.
+This module defines a Rectangle class that should return
+the string representation of the rectangle using the '#' character.
 """
 
 
@@ -57,7 +57,7 @@ class Rectangle:
             int: The height of the rectangle.
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -83,7 +83,7 @@ class Rectangle:
             int: The area of the rectangle.
         """
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """
         Calculates the perimeter of the rectangle.
@@ -109,9 +109,11 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle that can be used to recreate it.
+        Returns a string representation of the rectangle
+        that can be used to recreate it.
 
         Returns:
-            str: The string representation of the rectangle in the format "Rectangle(width, height)".
+            str: The string representation of the rectangle
+            in the format "Rectangle(width, height)".
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
