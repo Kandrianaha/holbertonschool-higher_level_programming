@@ -79,3 +79,4 @@ class Rectangle:
     def __del__(self):
         """Prints a message when the rectangle is deleted."""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
