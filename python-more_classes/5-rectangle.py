@@ -57,7 +57,7 @@ class Rectangle:
             int: The height of the rectangle.
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -95,7 +95,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-    
+
     def __str__(self):
         """
         Returns a string representation of the rectangle using '#' characters.
@@ -118,7 +118,7 @@ class Rectangle:
             in the format "Rectangle(width, height)".
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         """
         Deletes a Rectangle instance and prints a message.
