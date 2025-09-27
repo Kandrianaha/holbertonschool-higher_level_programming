@@ -1,16 +1,41 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+The ``MyList`` module
+======================
 
-my_list = MyList()
+Using ``MyList``
+-------------------
 
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
 
-print(my_list)
+First import ``MyList`` from the ``1-my_list`` file:
 
+>>> MyList = __import__('1-my_list').MyList
+
+Tests:
+
+>>>my_list = MyList()
+
+>>>my_list.append(1)
+>>>my_list.append(4)
+>>>my_list.append(2)
+>>>my_list.append(3)
+>>>my_list.append(5)
+
+>>>print(my_list)
+[1, 4, 2, 3, 5]
+
+Test - print sorted list without modifying original:
 my_list.pint_sorted()
+[1, 2, 3, 4, 5]
 
 print(my_list)
+[1, 4, 2, 3, 5]
+
+Test - empty list:
+>>>empty_list = MyList()
+>>>empty_list.print_sorted()
+[]
+
+Test - negative numbers:
+>>>neg_list = MyList([-1, -3, 2])
+>>>neg_list.print_sorted()
+[-3, -1, 2]
