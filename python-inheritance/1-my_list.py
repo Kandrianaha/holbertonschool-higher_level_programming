@@ -15,4 +15,4 @@ MyList class that extends the built-in list.
     without changing the original list.
     Assumes all elemnts are integers.
     """
-    print(sorted(self)
+    print(sorted(self))
