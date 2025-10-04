@@ -9,8 +9,6 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """
     A class representing a square, inheriting from Rectangle.
-
-    The constructor validates that size is a positive integer using the inherited integer_validator method.
     """
     def __init__(self, size):
         """
