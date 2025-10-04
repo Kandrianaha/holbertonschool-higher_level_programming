@@ -28,7 +28,7 @@ class Dog(Animal):
         """
         Returns the sound made by the dog.
         """
-        return "Woof!"
+        return "Bark"
     
 class Cat(Animal):
     """
@@ -38,13 +38,10 @@ class Cat(Animal):
         """
         Returns the sound made by the cat.
         """
-        return "Meow!"
+        return "Meow"
 
 bobby = Dog()
 garfield = Cat()
 
-print(bobby.sound())  # Output: Woof!
-print(garfield.sound())  # Output: Meow!
-
-print(isinstance(bobby, Animal))  # Output: True
-print(isinstance(garfield, Animal)) #Output: True
+print(bobby.sound())  # Output: Bark
+print(garfield.sound())  # Output: Meow
