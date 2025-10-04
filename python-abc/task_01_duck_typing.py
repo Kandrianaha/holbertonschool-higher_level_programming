@@ -39,7 +39,7 @@ class Circle(Shape):
             radius (float): The radius of the circle.
         """
         if radius < 0:
-            ValueError("Radius cannot be negative.")
+            raise ValueError("Radius cannot be negative.")
         self.radius = radius
 
     def area(self):
@@ -99,3 +99,17 @@ def shape_info(shape):
     
     print("Area:", shape.area())
     print("Perimeter:", shape.perimeter())
+
+#Tests
+if __name__ == "__main__":
+    circle = Circle(radius=5)
+    rectangle = Rectangle(width=4, height=7)
+
+    shape_info(circle)
+    shape_info(rectangle)
+
+    try:
+        bad_circle = Circle(radius=-5)
+        shape_info(bad_circle)
+    except ValueError as e:
+        print(f"Error: {e}")
