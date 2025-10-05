@@ -43,4 +43,4 @@ flying_fish.swim()  # Inherited from Fish
 flying_fish.fly()   # Inherited from Bird
 flying_fish.habitat()  # Overridden method
 
-print(FlyingFish.mro)  # Display the method resolution order
+print(FlyingFish.mro())  # Display the method resolution order
