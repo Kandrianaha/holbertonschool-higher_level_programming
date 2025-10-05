@@ -28,15 +28,15 @@ class Bird:
 class FlyingFish(Fish, Bird):
     def fly(self):
         """Overrrides the fly method."""
-        print("The flying fish is soaring!.")
+        print("The flying fish is soaring!")
 
     def swim(self):
         """Overrides the swim method."""
-        print("The flying fish is swimming!.")
+        print("The flying fish is swimming!")
 
     def habitat(self):
         """Return the habitat of the flying fish."""
-        print("The flying fish lives in both water and the sky.")
+        print("The flying fish lives in both water and the sky!")
 
 flying_fish = FlyingFish()
 flying_fish.swim()  # Inherited from Fish
