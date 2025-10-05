@@ -36,7 +36,7 @@ class FlyingFish(Fish, Bird):
 
     def habitat(self):
         """Return the habitat of the flying fish."""
-        print("The flying fish lives in both water and the sky!")
+        print("The flying fish lives both in water and the sky!")
 
 flying_fish = FlyingFish()
 flying_fish.swim()  # Inherited from Fish
