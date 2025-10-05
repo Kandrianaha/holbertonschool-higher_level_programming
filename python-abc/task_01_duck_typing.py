@@ -107,8 +107,3 @@ if __name__ == "__main__":
 
     shape_info(circle)
     shape_info(rectangle)
-
-    try:
-        c = Circle(-5)
-    except ValueError as e:
-        print(f"Caught expected error:", e)
