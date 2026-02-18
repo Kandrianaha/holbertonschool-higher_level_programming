@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/python3
 """This module appends a string to a text file (UTF8) and returns the number of characters added."""
 
 def append_write(filename="", text=""):
