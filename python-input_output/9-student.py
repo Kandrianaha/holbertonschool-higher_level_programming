@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""This module write a class Student
-that defines a student by Public instance attributes:
+"""Defines a student class by Public instance attributes:
 first_name, last_name, age"""
 
 
@@ -18,3 +17,7 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+
+        def to_json(self):
+            """Return the JSON representation of the Student instance"""
+            return self.__dict__
