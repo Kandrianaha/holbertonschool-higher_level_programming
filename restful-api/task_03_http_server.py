@@ -40,7 +40,7 @@ class SimpleHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(b"404 Not Found")
 
 if __name__ == '__main__':
-    server_address = ('', 8080)
+    server_address = ('', 8000)
     httpd = http.server.HTTPServer(server_address, SimpleHTTPRequestHandler)
-    print("Server running on http://localhost:8080/")
+    print("Server running on port 8000...")
     httpd.serve_forever()
