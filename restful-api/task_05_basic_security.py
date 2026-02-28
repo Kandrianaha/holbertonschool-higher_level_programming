@@ -47,7 +47,7 @@ def login():
 @app.route("/jwt-protected")
 @jwt_required()
 def jwt_protected():
-    return "JWT Auth: Access granted"
+    return "JWT Auth: Access Granted"
 
 @app.route("/admin-only")
 @jwt_required()
@@ -55,7 +55,7 @@ def admin_only():
     current_user = get_jwt_identity()
     if current_user["role"] != "admin":
         return jsonify({"error": "Admin access required"}), 403
-    return "Admin Access: Access granted"
+    return "Admin Access: Access Granted"
 
 """JWT Error Handlers"""
 @jwt.unauthorized_loader
@@ -75,7 +75,7 @@ def handle_revoked_token_error(jwt_header, jwt_data):
         return jsonify({"error": "Token has been revoked"}), 401
 
 @jwt.needs_fresh_token_loader
-def handle_needs_fresh_token_error(err):
+def handle_needs_fresh_token_error(jwt_header, jwt_data):
         return jsonify({"error": "Fresh token required"}), 401
 
 if __name__ == '__main__':
