@@ -11,7 +11,7 @@ jwt = JWTManager(app)
 
 users = {
     "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
-    "admin1": {"username": "admin1", "password": generate_password_hash("bye"), "role": "admin"}
+    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
 }
 
 """Basic Authentication"""
@@ -28,7 +28,7 @@ def auth_error(status):
 @app.route("/basic-protected")
 @auth.login_required
 def basic_protected():
-    return "Basic Auth: Access granted"
+    return "Basic Auth: Access Granted"
 
 """JWT Authentication"""
 @app.route("/login", methods=["POST"])
@@ -67,11 +67,11 @@ def handle_invalid_token_error(err):
         return jsonify({"error": "Invalid token"}), 401
 
 @jwt.expired_token_loader
-def handle_expired_token_error(err):
+def handle_expired_token_error(jwt_header, jwt_data):
         return jsonify({"error": "Token has expired"}), 401
 
 @jwt.revoked_token_loader
-def handle_revoked_token_error(err):
+def handle_revoked_token_error(jwt_header, jwt_data):
         return jsonify({"error": "Token has been revoked"}), 401
 
 @jwt.needs_fresh_token_loader
