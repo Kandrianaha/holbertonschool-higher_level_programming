@@ -8,9 +8,9 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    state_name = sys.argv[4]
+    state_name_searched = sys.argv[4]
 
-    # connect to the MySQL database
+    # connect to MySQL server
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -19,13 +19,12 @@ if __name__ == "__main__":
         db=database
     )
 
-    # Create a cursor
+    # creation of a cursor to execute queries
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC",
         (state_name_searched,))
-    rows = cursor.fetchall()
-    for row in rows:
+    for row in cursor.fetchall():
         print(row)
     cursor.close()
     db.close()
