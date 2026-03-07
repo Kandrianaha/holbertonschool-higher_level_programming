@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states matching the name 
+"""Lists all states matching the name
 protecting from MySQL injections"""
 import MySQLdb
 import sys
