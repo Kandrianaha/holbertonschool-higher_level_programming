@@ -5,7 +5,6 @@ import sys
 
 if __name__ == "__main__":
     """Connects to the MySQL database and retrieves cities of a state"""
-    # Connect to the database
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -18,7 +17,6 @@ if __name__ == "__main__":
         "JOIN states ON cities.state_id = states.id "
         "WHERE BINARY states.name = %s "
         "ORDER BY cities.id ASC", (sys.argv[4],))
-    for row in cursor.fetchall():
-        print(row)
+    print(", ".join([row[0] for row in cursor.fetchall()]))
     cursor.close()
     db.close()
