@@ -21,5 +21,5 @@ def generate_invitations(template, attendees):
         content = content.replace("{event_date}", str(attendee.get("event_date", "N/A") or "N/A"))
         content = content.replace("{event_location}", str(attendee.get("event_location", "N/A") or "N/A"))
 
-    with open(f"output_{i}.txt", "w") as f:
+    with open(f"output_01.txt", "w") as f:
         f.write(content)
