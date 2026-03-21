@@ -7,7 +7,7 @@ def generate_invitations(template, attendees):
         return
     
     if template == "":
-        print("Tenplate is empty, no output files generated.")
+        print("Template is empty, no output files generated.")
         return
     
     if len(attendees) == 0:
